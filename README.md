@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="KTHAIS" src="assets/img/logo.png" width="250px"/>
 </p>
-<h1 align="center">KTHack subscribe page</h1>
+<h1 align="center">KTHack join page</h1>
 <p align="center">
   <img alt="KTHAIS" src="overview.png" width="100%"/>
 </p>
@@ -12,7 +12,7 @@
 * MySQL
 
 ## Deploy 
-1. Clone repository to your computer with `git clone https://github.com/kthackais/subscribe && cd subscribe`
+1. Clone repository to your computer with `git clone https://github.com/kthackais/join && cd join`
 2. Install PHP and MySQL if needed
 3. Run `mysql < db/db.sql` to create the database
 4. Create user and set the password with `CREATE USER '[USERNAME]'@'localhost' IDENTIFIED BY '[PASSWORD]';`
