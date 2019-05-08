@@ -161,7 +161,7 @@
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="involved">What do you most want to be involved in?</label>
+                            <label for="involved">What do you most want to be involved in?<br><span style="font-weight: 100;font-size: 14px;">You can select more than one option</span></label>
 	                    </div>
           	            <div class="col-sm-6 white-text" style="text-align: left;">
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 6px; margin-bottom: 0px; width: 100%; display: inline-block;">
