@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css?_=1554313746">
-    <link rel="stylesheet" href="../assets/css/join.css?_=1554313746">
+    <link rel="stylesheet" href="assets/css/main.css?_=1554313746">
+    <link rel="stylesheet" href="assets/css/join.css?_=1554313746">
     <meta name="theme-color" content="#68a4cc">
     <meta name="author" content="KTHack">
-    <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
-    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="icon" href="favicon.png" type="image/png">
     <meta name="description" content="KTH hackathon, organised by KTH Artificial Intelligence Society">
 
 
@@ -43,7 +43,7 @@
 	      	<div class="col-sm-3">
             </div>
 	      	<div class="col-sm-6">
-	      	    <a href="../"><img src="../assets/img/logo_white.png" class="logo"></a>
+	      	    <a href=""><img src="assets/img/logo_white.png" class="logo"></a>
             </div>
 	      	<div class="col-sm-3">
             </div>
