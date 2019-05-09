@@ -12,9 +12,9 @@ $email = $_POST["email"];
 $major = $_POST["major"];
 $year = $_POST["year"];
 $event = $_POST["event"];
-$involved = $_POST["involved"];
+$departments = $_POST["involved"];
 if(is_array($_POST["involved"])){
-    $involved = implode(";", $_POST["involved"]);
+    $departments = implode(";", $_POST["involved"]);
 }
 $similar = $_POST["similar"];
 $english = $_POST["confidence"];
