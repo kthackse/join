@@ -6,31 +6,23 @@ require "../vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::create("../");
 $dotenv->load();
 
-$email = "";
-if(isset($_POST["email"])){
-    $email = $_POST["email"];
+$name = $_POST["name"];
+$surname = $_POST["surname"];
+$email = $_POST["email"];
+$major = $_POST["major"];
+$year = $_POST["year"];
+$event = $_POST["event"];
+$involved = $_POST["involved"];
+if(is_array($_POST["involved"])){
+    $involved = implode(";", $_POST["involved"]);
 }
-
-$policies = "";
-if(isset($_POST["policies"])){
-    $policies = $_POST["policies"];
-}
-
-if($email == ""){
-    $_SESSION["status"] = "email";
-    header("Location: ../");
-    die();
-}
-else if($policies != "accept"){
-    $_SESSION["status"] = "checkbox";
-    header("Location: ../");
-    die();
-}
-else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $_SESSION["status"] = "format";
-    header("Location: ../");
-    die();
-}
+$similar = $_POST["similar"];
+$english = $_POST["confidence"];
+$linkedin = $_POST["linkedin"];
+$github = $_POST["github"];
+$website = $_POST["website"];
+$description = $_POST["description"];
+$extra = $_POST["extra"];
 
 $hash = bin2hex(random_bytes(32));
 
@@ -41,7 +33,7 @@ if($conn->connect_error){
     die();
 }
 
-$sql = "SELECT * FROM registered WHERE email = '" . $email . "';";
+$sql = "SELECT * FROM application WHERE email = '" . $email . "' AND confirmed = 0;";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
     $_SESSION["status"] = "registered";
@@ -50,7 +42,7 @@ if($result->num_rows > 0){
     die();
 }
 
-$sql = "SELECT * FROM confirmed WHERE email = '" . $email . "';";
+$sql = "SELECT * FROM application WHERE email = '" . $email . "' AND confirmed = 1;";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
     $_SESSION["status"] = "confirmed";
@@ -59,8 +51,8 @@ if($result->num_rows > 0){
     die();
 }
 
-$sql = "INSERT INTO registered (email, hash)
-VALUES ('" . $email . "', '" . $hash . "');";
+$sql = "INSERT INTO application (email, hash, name, surname, major, year, event, departments, similar, english, linkedin, github, website, description, extra)
+VALUES ('" . $email . "', '" . $hash . "', '" . $name . "', '" . $surname . "', '" . $major . "', " . $year . ", '" . $event . "', '" . $departments . "', " . $english . ", '" . $linkedin . "', '" . $github . "', '" . $website . "', '" . $description . "', '" . $extra . "');";
 
 if($conn->query($sql) !== TRUE){
     $_SESSION["status"] = "database";
@@ -79,7 +71,7 @@ use SendGrid\Mail\From;
 use SendGrid\Mail\Mail;
 use SendGrid\Mail\To;
 
-$subject = "Confirm your email to subscribe for KTHack 2020!";
+$subject = "Confirm your email to apply as organiser for KTHack 2020!";
 $fromEmail = "noreply@kthack.com";
 $fromName = "KTHack";
 $toEmail = $email;
