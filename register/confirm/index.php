@@ -24,7 +24,7 @@ if($conn->connect_error){
     die();
 }
 
-$sql = "SELECT * FROM confirmed WHERE hash = '" . $code . "';";
+$sql = "SELECT * FROM application WHERE hash = '" . $code . "' AND confirmed = 1;";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
     $_SESSION["status"] = "confirmed";
@@ -33,7 +33,7 @@ if($result->num_rows > 0){
     die();
 }
 
-$sql = "SELECT * FROM registered WHERE hash = '" . $code . "';";
+$sql = "SELECT * FROM application WHERE hash = '" . $code . "' AND confirmed = 0;";
 $result = $conn->query($sql);
 if($result->num_rows == 0){
     $_SESSION["status"] = "code";
@@ -44,18 +44,7 @@ if($result->num_rows == 0){
 
 $result = $result->fetch_assoc();
 
-$sql = "INSERT INTO confirmed (email, hash, created)
-VALUES ('" . $result["email"] . "', '" . $result["hash"] . "', '" . $result["created"] . "');";
-
-if($conn->query($sql) !== TRUE){
-    $_SESSION["status"] = "database";
-    $conn->close();
-    header("Location: ../../");
-    die();
-}
-
-$sql = "DELETE FROM registered WHERE email = '" . $result["email"] . "';";
-
+$sql = "UPDATE application SET confirmed = 1 WHERE hash = '" . $code . "';";
 if($conn->query($sql) !== TRUE){
     $_SESSION["status"] = "database";
     $conn->close();
@@ -69,4 +58,3 @@ $_SESSION["status"] = "activated";
 header("Location: ../../");
 die();
 ?>
-
