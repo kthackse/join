@@ -88,37 +88,38 @@
     </div>
 </header>
 
-<div id="form" class="container join-form" style="margin-top: 100vh;">
+<div id="form" class="container join-form" onsubmit="return validateForm()" style="margin-top: 100vh;">
 	<div class="row join-form-row">
         <h2 class="white bold join-title">Application form</h2>
       	<div class="col-sm-1">
         </div>
       	<div class="col-sm-10">
-            <form action="register/" method="post" class="submission-form text-center">
+            <p id="missing-fields" class="white missing-hide" style="text-align: center; margin-top: 50px;">It seems some of the fields were left or had the wrong content, please check you've filled everything correctly!</p>
+            <form action="register/" method="post" id="form-join" class="submission-form text-center">
 	            <div class="row">
                     <h3 class="white bold text-center join-section">Contact information</h3>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="name">What's your name?</label>
+                            <label for="name" id="label-name">What's your name?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="name" id="name" placeholder="Elliot">
+                            <input type="text" name="name" id="input-name" placeholder="Elliot">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="surname">And your surname?</label>
+                            <label for="surname" id="label-surname">And your surname?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="surname" id="surname" placeholder="Alderson">
+                            <input type="text" name="surname" id="input-surname" placeholder="Alderson">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6 join-subrow">
-                            <label for="email">And finally, your email?</label>
+                            <label for="email" id="label-email">And finally, your email?</label>
 	                    </div>
           	            <div class="col-sm-6 join-subrow">
-                            <input type="text" name="email" id="email" placeholder="mr.robot@kthack.com">
+                            <input type="text" name="email" id="input-email" placeholder="mr.robot@kthack.com">
 	                    </div>
 	                </div>
 	            </div>
@@ -126,10 +127,10 @@
                     <h3 class="white bold text-center join-section">About you</h3>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="major">What are you studying?</label>
+                            <label for="major" id="label-major">What are you studying?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="major" id="major" placeholder="Hacking management">
+                            <input type="text" name="major" id="input-major" placeholder="Hacking management">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -138,7 +139,7 @@
 	                    </div>
           	            <div class="col-sm-6 white-text" style="text-align: left;">
               	            <div class="radio" style="margin-right: 20px; margin-top: 6px; margin-bottom: 6px; display: inline-block;">
-                                <input type="radio" name="year" value="1"><label for="year" class="white">1</label>
+                                <input type="radio" name="year" value="1" checked><label for="year" class="white">1</label>
 	                        </div>
               	            <div class="radio" style="margin-right: 20px; margin-top: 6px; margin-bottom: 6px; display: inline-block;">
                                 <input type="radio" name="year" value="2"><label for="year" class="white">2</label>
@@ -153,10 +154,10 @@
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="major">Have you organised any similar event?</label>
+                            <label for="event" id="label-event">Have you organised any similar event?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="major" id="major" placeholder="Yes! I've been helping Allsafe with some malware...">
+                            <input type="text" name="event" id="input-event" placeholder="Yes! I've been helping Allsafe with some malware...">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -189,10 +190,10 @@
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="similar">Have you done anything similar to the above? Why do you want to do those things at KTHack?</label>
+                            <label for="similar" id="label-similar">Have you done anything similar to the above? Why do you want to do those things at KTHack?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="similar" id="similar" placeholder="Yes! I've been managing people in a secret society...">
+                            <input type="text" name="similar" id="input-similar" placeholder="Yes! I've been managing people in a secret society...">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -201,7 +202,7 @@
 	                    </div>
           	            <div class="col-sm-6 white-text" style="text-align: left;">
               	            <div class="radio" style="margin-right: 20px; margin-top: 6px; margin-bottom: 6px; display: inline-block;">
-                                <input type="radio" name="confidence" value="0"><label for="year" class="white">0</label>
+                                <input type="radio" name="confidence" value="0" checked><label for="year" class="white">0</label>
 	                        </div>
               	            <div class="radio" style="margin-right: 20px; margin-top: 6px; margin-bottom: 6px; display: inline-block;">
                                 <input type="radio" name="confidence" value="1"><label for="year" class="white">1</label>
@@ -222,34 +223,34 @@
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="linkedin">Do you have LinkedIn?</label>
+                            <label for="linkedin" id="label-linkedin">Do you have LinkedIn?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/fsociety">
-	                    </div>
-	                </div>
-      	            <div class="col-sm-12 join-subrow">
-          	            <div class="col-sm-6">
-                            <label for="github">Do you have GitHub?</label>
-	                    </div>
-          	            <div class="col-sm-6">
-                            <input type="text" name="github" id="github" placeholder="https://github.com/fsociety">
+                            <input type="text" name="linkedin" id="input-linkedin" placeholder="https://linkedin.com/in/fsociety">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="website">Do you have webiste or portfolio?</label>
+                            <label for="github" id="label-github">Do you have GitHub?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="website" id="website" placeholder="https://fsociety.org">
+                            <input type="text" name="github" id="input-github" placeholder="https://github.com/fsociety">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
           	            <div class="col-sm-6">
-                            <label for="description">Describe yourself!</label>
+                            <label for="website" id="label-website">Do you have webiste or portfolio?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="description" id="description" placeholder="I'm a senior network engineer at Allsafe Cybersecurity and a vigilante hacker...">
+                            <input type="text" name="website" id="input-website" placeholder="https://fsociety.org">
+	                    </div>
+	                </div>
+      	            <div class="col-sm-12 join-subrow">
+          	            <div class="col-sm-6">
+                            <label for="description" id="label-description">Describe yourself!</label>
+	                    </div>
+          	            <div class="col-sm-6">
+                            <input type="text" name="description" id="input-description" placeholder="I'm a senior network engineer at Allsafe Cybersecurity and a vigilante hacker...">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -262,20 +263,8 @@
 	                </div>
 	            </div>
 	            <div class="row join-row-last">
-      	            <div class="col-sm-12 checkbox">
-                        <input type="checkbox" name="policies" id="policies" value="accept"><label for="policies" class="white" style="float: unset;padding: inherit;vertical-align: unset;">I read, understand and accept the <a href="policy" class="link-white bold">policy</a>.</label>
-                    <?php
-                        session_start();
-                        if(isset($_SESSION["status"]) && ($_SESSION["status"] == "email")){
-                            echo "<p class=\"white bold margin-top-only\">You need to enter an email!</p>";
-                        }
-                        else if(isset($_SESSION["status"]) && ($_SESSION["status"] == "checkbox")){
-                            echo "<p class=\"white bold margin-top-only\">You need to accept the policy!</p>";
-                        }
-                        else if(isset($_SESSION["status"]) && ($_SESSION["status"] == "format")){
-                            echo "<p class=\"white bold margin-top-only\">The email you entered is invalid!</p>";
-                        }
-                    ?>
+      	            <div class="col-sm-12 checkbox" id="div-policies">
+                        <input type="checkbox" name="policies" id="input-policies" value="accept"><label for="policies" id="label-policies" class="white" style="float: unset;padding: inherit;vertical-align: unset;">I read, understand and accept the <a href="policy" class="link-white bold">policy</a>.</label>
 	                </div>
 	            </div>
 	            <div class="row">
@@ -317,6 +306,93 @@
         }, 'slow');
         // window.location = "#form";
     });
+
+    function scrollTo(id){
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 'slow');
+    }
+    
+    function markEmailAsBadFormatted(id){
+        var required = "This field has the wrong format!";
+        $(id)[0].value = "";
+        $(id)[0].oldPlaceholder = $(id)[0].placeholder;
+        $(id)[0].placeholder = required;
+        $(id).addClass('input-required');
+    }
+    
+    function markAsRequired(id){
+        var required = "This field is mandatory!";
+        $(id)[0].value = "";
+        $(id)[0].oldPlaceholder = $(id)[0].placeholder;
+        $(id)[0].placeholder = required;
+        $(id).addClass("input-required");
+    }
+    
+    function markPoliciesAsRequired(id){
+        var required = "<span id=\"required-policies\" class=\"white\" style=\"font-weight: 100;font-size: 14px;\"><br>You must accept the policy in order to apply!</span>";
+        $(id)[0].innerHTML += required;
+    }
+    
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function cleanOldMarked(id){
+        for(i=0; i<$(id)[0].length; ++i){
+            if($(id)[0][i].oldPlaceholder != undefined){
+                $(id)[0][i].placeholder = $(id)[0][i].oldPlaceholder;
+                $(id)[0][i].oldPlaceholder = undefined;
+            }
+            if($(id)[0][i].id != ""){
+                $("#" + $(id)[0][i].id).removeClass("input-required");
+            }
+        }
+        $("#required-policies").remove()
+    }
+    
+    function validateForm() {
+        errors = false;
+        cleanOldMarked("#form-join");
+        if(document.forms["form-join"]["name"].value == ""){
+            markAsRequired("#input-name");
+            errors = true;
+        }
+        if(document.forms["form-join"]["surname"].value == ""){
+            markAsRequired("#input-surname");
+            errors = true;
+        }
+        if(!validateEmail(document.forms["form-join"]["email"].value)){
+            markEmailAsBadFormatted("#input-email");
+            errors = true;
+        }
+        if(document.forms["form-join"]["major"].value == ""){
+            markAsRequired("#input-major");
+            errors = true;
+        }
+        if(document.forms["form-join"]["event"].value == ""){
+            markAsRequired("#input-event");
+            errors = true;
+        }
+        if(document.forms["form-join"]["similar"].value == ""){
+            markAsRequired("#input-similar");
+            errors = true;
+        }
+        if(document.forms["form-join"]["description"].value == ""){
+            markAsRequired("#input-description");
+            errors = true;
+        }
+        if(!(document.forms["form-join"]["policies"].checked)){
+            markPoliciesAsRequired("#div-policies");
+            errors = true;
+        }
+        if(errors){
+            $("#missing-fields").removeClass("missing-hide");
+            scrollTo("#form");
+        }
+        return !errors;
+    } 
 </script>
 
 </body>

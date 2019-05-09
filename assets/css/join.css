@@ -159,3 +159,19 @@ margin-left: 15px;
 margin-bottom: 0;
 font-weight: 400;
 }
+
+.input-required{background-color: #FAFAFABA !important; color: #68a4cc !important;}
+.input-required::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #68a4cc !important;
+  opacity: 1;
+}
+
+.input-required:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #68a4cc !important;
+}
+
+.input-required::-ms-input-placeholder { /* Microsoft Edge */
+  color: #68a4cc !important;
+}
+
+.missing-hide{display: none;}
