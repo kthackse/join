@@ -52,7 +52,7 @@ if($result->num_rows > 0){
 }
 
 $sql = "INSERT INTO application (email, hash, name, surname, major, year, event, departments, similar, english, linkedin, github, website, description, extra)
-VALUES ('" . $email . "', '" . $hash . "', '" . $name . "', '" . $surname . "', '" . $major . "', " . $year . ", '" . $event . "', '" . $departments . "', " . $english . ", '" . $linkedin . "', '" . $github . "', '" . $website . "', '" . $description . "', '" . $extra . "');";
+VALUES ('" . $email . "', '" . $hash . "', '" . $name . "', '" . $surname . "', '" . $major . "', " . $year . ", '" . $event . "', '" . $departments . "', '" . $similar . "', " . $english . ", '" . $linkedin . "', '" . $github . "', '" . $website . "', '" . $description . "', '" . $extra . "');";
 
 if($conn->query($sql) !== TRUE){
     $_SESSION["status"] = "database";
