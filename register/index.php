@@ -123,7 +123,7 @@ $template = str_replace('{{email}}', $email, $template);
 $subject = "[KTHack] New application";
 $fromEmail = "noreply@kthack.com";
 $fromName = "KTHack";
-$toEmail = "oriol@kthais.com";
+$toEmail = "contact@kthack.com";
 $htmlContent = $template;
 
 $from = new From($fromEmail, $fromName);
