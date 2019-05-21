@@ -175,3 +175,16 @@ font-weight: 400;
 }
 
 .missing-hide{display: none;}
+
+@media only screen and (max-width: 768px) {
+  form label {
+    text-align: left;
+    width: 100%;
+  }
+#label-policies {
+    width: auto !important;
+}
+input {
+    margin-bottom: 10px;
+}
+}
