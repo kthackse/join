@@ -166,25 +166,25 @@
 	                    </div>
           	            <div class="col-sm-6 white-text" style="text-align: left;">
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 6px; margin-bottom: 0px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="sponsorship"><label for="involved" class="white" style="float: left; text-align: left;"><b>Sponsorship</b>: Persuasive, good writing, both Swedish and English. Come raise <i>lots of moneys</i>.</label>
+                                <input type="checkbox" name="involved-0" value="sponsorship"><label for="involved" class="white" style="float: left; text-align: left;"><b>Sponsorship</b>: Persuasive, good writing, both Swedish and English. Come raise <i>lots of moneys</i>.</label>
 	                        </div>
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 0px; margin-bottom: 0px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="design"><label for="involved" class="white" style="float: left; text-align: left;"><b>Design</b>: Do you design logos for fun? Can you design experiences for your users?</label>
+                                <input type="checkbox" name="involved-1" value="design"><label for="involved" class="white" style="float: left; text-align: left;"><b>Design</b>: Do you design logos for fun? Can you design experiences for your users?</label>
 	                        </div>
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 0px; margin-bottom: 0px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="logistics"><label for="involved" class="white" style="float: left; text-align: left;"><b>Logistics</b>: Do you work well under pressure? Are you a hustler? Help us keep everything running really smoothly.</label>
+                                <input type="checkbox" name="involved-2" value="logistics"><label for="involved" class="white" style="float: left; text-align: left;"><b>Logistics</b>: Do you work well under pressure? Are you a hustler? Help us keep everything running really smoothly.</label>
 	                        </div>
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 0px; margin-bottom: 0px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="marketing"><label for="involved" class="white" style="float: left; text-align: left;"><b>Marketing</b>: Are you a Facebook/Twitter genius?</label>
+                                <input type="checkbox" name="involved-3" value="marketing"><label for="involved" class="white" style="float: left; text-align: left;"><b>Marketing</b>: Are you a Facebook/Twitter genius?</label>
 	                        </div>
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 0px; margin-bottom: 0px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="webdev"><label for="involved" class="white" style="float: left; text-align: left;"><b>WebDev</b>: Do you like making web apps on your free time? Frontend or backend? Help us build eveything we need.</label>
+                                <input type="checkbox" name="involved-4" value="webdev"><label for="involved" class="white" style="float: left; text-align: left;"><b>WebDev</b>: Do you like making web apps on your free time? Frontend or backend? Help us build eveything we need.</label>
 	                        </div>
               	            <div class="radio-check" style="margin-right: 20px; margin-top: 0px; margin-bottom: 0px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="staff"><label for="involved" class="white" style="float: left; text-align: left;"><b>Staff</b>: Can you boss around and make things happen? A lot of pressure and volunteer management.</label>
+                                <input type="checkbox" name="involved-5" value="staff"><label for="involved" class="white" style="float: left; text-align: left;"><b>Staff</b>: Can you boss around and make things happen? A lot of pressure and volunteer management.</label>
 	                        </div>
               	            <div class="radio-check" style="margin-top: 0px; margin-bottom: 6px; width: 100%; display: inline-block;">
-                                <input type="checkbox" name="involved" value="hackerxperience"><label for="involved" class="white" style="float: left; text-align: left;"><b>HackerXperience</b>: Do you love hackathons? Do you have great ideas to <i>make KTHack great <span style="text-decoration: line-through;">again</span> for the first time</i>?</label>
+                                <input type="checkbox" name="involved-6" value="hackerxperience"><label for="involved" class="white" style="float: left; text-align: left;"><b>HackerXperience</b>: Do you love hackathons? Do you have great ideas to <i>make KTHack great <span style="text-decoration: line-through;">again</span> for the first time</i>?</label>
 	                        </div>
 	                    </div>
 	                </div>

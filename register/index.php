@@ -12,9 +12,27 @@ $email = $_POST["email"];
 $major = $_POST["major"];
 $year = $_POST["year"];
 $event = $_POST["event"];
-$departments = $_POST["involved"];
-if(is_array($_POST["involved"])){
-    $departments = implode(";", $_POST["involved"]);
+$departments = "";
+if isset($_POST["involved-0"]){
+    $departments = $departments.";sponsorship";
+}
+if isset($_POST["involved-1"]){
+    $departments = $departments.";design";
+}
+if isset($_POST["involved-2"]){
+    $departments = $departments.";logistics";
+}
+if isset($_POST["involved-3"]){
+    $departments = $departments.";marketing";
+}
+if isset($_POST["involved-4"]){
+    $departments = $departments.";webdev";
+}
+if isset($_POST["involved-5"]){
+    $departments = $departments.";staff";
+}
+if isset($_POST["involved-6"]){
+    $departments = $departments.";hackerxperience";
 }
 $similar = $_POST["similar"];
 $english = $_POST["confidence"];
