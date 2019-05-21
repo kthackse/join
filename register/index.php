@@ -99,8 +99,8 @@ else{
 // Send email to webdev for testing
 
 $template = file_get_contents("templates/admin.html");
-$template = str_replace('{{name}}', $hash, $template);
-$template = str_replace('{{email}}', $hash, $template);
+$template = str_replace('{{name}}', $name." ".$surname, $template);
+$template = str_replace('{{email}}', $email, $template);
 
 $subject = "[KTHack] New application";
 $fromEmail = "noreply@kthack.com";
