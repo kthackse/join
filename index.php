@@ -53,7 +53,7 @@
             </div>
 	      	<div class="col-sm-6">
 				<h1 class="white bold text-center" style="margin-bottom: 15px;">Apply for organiser!</h1>
-				<p class="white paragraph text-center" style="margin-bottom: 10px;">Organising KTHack will be awesome, we're looking for a small group of amazing and dedicated KTH students to join our team!</p>
+				<p class="white paragraph text-center" style="margin-bottom: 10px;">Organising KTHack will be awesome, we're looking for a small group of amazing and dedicated students to join our team!</p>
 				<p class="white paragraph text-center">Application deadline is <b>Sunday, June 2nd</b>.</p>
                 <?php
                     session_start();
