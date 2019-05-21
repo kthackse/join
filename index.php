@@ -103,7 +103,7 @@
                             <label for="name" id="label-name">What's your name?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="name" id="input-name" placeholder="Elliot">
+                            <input type="text"  maxlength="255" name="name" id="input-name" placeholder="Elliot">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -111,7 +111,7 @@
                             <label for="surname" id="label-surname">And your surname?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="surname" id="input-surname" placeholder="Alderson">
+                            <input type="text" maxlength="255" name="surname" id="input-surname" placeholder="Alderson">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -119,7 +119,7 @@
                             <label for="email" id="label-email">And finally, your email?</label>
 	                    </div>
           	            <div class="col-sm-6 join-subrow">
-                            <input type="text" name="email" id="input-email" placeholder="mr.robot@kthack.com">
+                            <input type="text" maxlength="255" name="email" id="input-email" placeholder="mr.robot@kthack.com">
 	                    </div>
 	                </div>
 	            </div>
@@ -130,7 +130,7 @@
                             <label for="major" id="label-major">What are you studying?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="major" id="input-major" placeholder="Hacking management">
+                            <input type="text" maxlength="255" name="major" id="input-major" placeholder="Hacking management">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -157,7 +157,7 @@
                             <label for="event" id="label-event">Have you organised any similar event?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="event" id="input-event" placeholder="Yes! I've been helping Allsafe with some malware...">
+                            <input type="text" maxlength="255" name="event" id="input-event" placeholder="Yes! I've been helping Allsafe with some malware...">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -193,7 +193,7 @@
                             <label for="similar" id="label-similar">Have you done anything similar to the above? Why do you want to do those things at KTHack?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="similar" id="input-similar" placeholder="Yes! I've been managing people in a secret society...">
+                            <input type="text" maxlength="255" name="similar" id="input-similar" placeholder="Yes! I've been managing people in a secret society...">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -226,7 +226,7 @@
                             <label for="linkedin" id="label-linkedin">Do you have LinkedIn?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="linkedin" id="input-linkedin" placeholder="https://linkedin.com/in/fsociety">
+                            <input type="text" maxlength="255" name="linkedin" id="input-linkedin" placeholder="https://linkedin.com/in/fsociety">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -234,7 +234,7 @@
                             <label for="github" id="label-github">Do you have GitHub?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="github" id="input-github" placeholder="https://github.com/fsociety">
+                            <input type="text" maxlength="255" name="github" id="input-github" placeholder="https://github.com/fsociety">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -242,7 +242,7 @@
                             <label for="website" id="label-website">Do you have webiste or portfolio?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="website" id="input-website" placeholder="https://fsociety.org">
+                            <input type="text" maxlength="255" name="website" id="input-website" placeholder="https://fsociety.org">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -250,7 +250,7 @@
                             <label for="description" id="label-description">Describe yourself!</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="description" id="input-description" placeholder="I'm a senior network engineer at Allsafe Cybersecurity and a vigilante hacker...">
+                            <input type="text" maxlength="255" name="description" id="input-description" placeholder="I'm a senior network engineer at Allsafe Cybersecurity and a vigilante hacker...">
 	                    </div>
 	                </div>
       	            <div class="col-sm-12 join-subrow">
@@ -258,7 +258,7 @@
                             <label for="extra">Do you have something else you would like us to know?</label>
 	                    </div>
           	            <div class="col-sm-6">
-                            <input type="text" name="extra" id="extra" placeholder="I've been framed by the FBI to fill this form!">
+                            <input type="text" maxlength="255" name="extra" id="extra" placeholder="I've been framed by the FBI to fill this form!">
 	                    </div>
 	                </div>
 	            </div>
