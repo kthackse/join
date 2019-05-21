@@ -160,7 +160,7 @@ margin-bottom: 0;
 font-weight: 400;
 }
 
-.input-required{background-color: #FAFAFABA !important; color: #68a4cc !important;}
+.input-required{background-color: rgba(250, 250, 250, 0.75) !important; color: #68a4cc !important;}
 .input-required::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #68a4cc !important;
   opacity: 1;
