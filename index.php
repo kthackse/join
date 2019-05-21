@@ -65,7 +65,7 @@
                         echo "<p class=\"white bold margin-0 text-center\">Your email has been confirmed, thank-you!</p></div><div class=\"col-sm-3\"></div></div></div></header>";
                     }
                     else if(isset($_SESSION["status"]) && ($_SESSION["status"] == "database")){
-                        echo "<p class=\"white bold margin-0 text-center\">Internal error, please write to <a href=\"mailto:contact@kthack.com\" class=\"link-white bold\">contact@kthack.com</a>!</p></div><div class=\"col-sm-3\"></div></div></div></header>";
+                        echo "<p class=\"white bold margin-0 text-center\">Internal error, please write to <a href=\"mailto:contact@kthack.com\" class=\"link-white bold\">contact@kthais.com</a>!</p></div><div class=\"col-sm-3\"></div></div></div></header>";
                     }
                     else if(isset($_SESSION["status"]) && ($_SESSION["status"] == "registered")){
                         echo "<p class=\"white bold margin-0 text-center\">You have already applied, but the email hasn't been confirmed yet, check the spam folder!</p></div><div class=\"col-sm-3\"></div></div></div></header>";

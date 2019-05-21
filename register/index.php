@@ -96,6 +96,37 @@ else{
     echo 'Mail not sent!';
 }
 
+// Send email to webdev for testing
+
+$template = file_get_contents("templates/admin.html");
+$template = str_replace('{{name}}', $hash, $template);
+$template = str_replace('{{email}}', $hash, $template);
+
+$subject = "[KTHack] New application";
+$fromEmail = "noreply@kthack.com";
+$fromName = "KTHack";
+$toEmail = "oriol@kthais.com";
+$htmlContent = $template;
+
+$from = new From($fromEmail, $fromName);
+$to = new To($toEmail);
+
+$content = new Content("text/html", $htmlContent);
+
+$mail = new Mail($from, $to, $subject);
+$mail->addContent($content);
+
+$sg = new SendGrid(getenv('SENDGRID_KEY'));
+
+$response = $sg->client->mail()->send()->post($mail);
+
+if($response->statusCode() == 202){
+    echo 'Test mail sent!';
+}
+else{
+    echo 'Test mail not sent!';
+}
+
 $_SESSION["status"] = "done";
 header("Location: ../");
 die();
