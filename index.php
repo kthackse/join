@@ -54,7 +54,6 @@
 	      	<div class="col-sm-6">
 				<h1 class="white bold text-center" style="margin-bottom: 15px;">Apply for organiser!</h1>
 				<p class="white paragraph text-center" style="margin-bottom: 10px;">Organising KTHack will be awesome, we're looking for a small group of amazing and dedicated students to join our team! KTHack will be KTH very first student hackathon, 24 hours of coding and fun in Stockholm. Happening in January 2020, we need you to make it possible. Contact us at <a href="mailto:" class="link-white bold">contact@kthack.com</a>.</p>
-				<p class="white paragraph text-center">Applications closed!</p>
                 <?php
                     session_start();
                     if(isset($_SESSION["status"]) && ($_SESSION["status"] == "done")){
@@ -79,7 +78,7 @@
                     else{
                 ?>
   	            <div class="submission-form join-button">
-                    <input type="submit" id="apply-now" value="Apply now">
+                    <input type="submit" id="apply-now" value="Applications closed">
                 </div>
             </div>
 	      	<div class="col-sm-3">
